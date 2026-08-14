@@ -665,6 +665,11 @@ a:hover {
   padding-bottom: 4rem;
 }
 
+/* Portfolio-specific About layout */
+#about .box-shadow-full {
+  padding-bottom: 3rem;
+}
+
 .about-mf .about-img {
   margin-bottom: 2rem;
 }
@@ -687,6 +692,134 @@ a:hover {
 .skill-mf .progress .progress-bar {
   height: .7rem;
   background-color: #03d74a;
+}
+
+.skill-stack {
+  margin-top: .75rem;
+  padding: 1.4rem;
+  border: 1px solid #e5f0ea;
+  border-radius: .7rem;
+  background: linear-gradient(135deg, #f9fcfa 0%, #f0f8f3 100%);
+}
+
+.skill-stack > .title-s {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+}
+
+.skill-group {
+  min-height: 105px;
+  padding: .85rem .9rem;
+  border-left: 3px solid #03d74a;
+  border-radius: .2rem .45rem .45rem .2rem;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .04);
+}
+
+.skill-label {
+  display: block;
+  margin-bottom: .35rem;
+  color: #1e1e1e !important;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.skill-group p {
+  margin: 0;
+  color: #4e4e4e;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+/* Work experience */
+#experience .box-shadow-full {
+  padding-top: 2.8rem;
+  padding-bottom: 2.4rem;
+}
+
+.experience-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.experience-content .title-box-2 {
+  margin-bottom: 1.8rem;
+}
+
+.experience-content .title-box-2 .color-a {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.experience-role {
+  position: relative;
+  padding: 0 0 1.5rem 1.65rem;
+  border-left: 2px solid #dceee2;
+}
+
+.experience-role:last-child {
+  padding-bottom: 0;
+}
+
+.experience-role::before {
+  position: absolute;
+  top: .3rem;
+  left: -.48rem;
+  width: .85rem;
+  height: .85rem;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #03d74a;
+  box-shadow: 0 0 0 2px #03d74a;
+  content: '';
+}
+
+.experience-role h6 {
+  margin: 0 0 .65rem;
+  color: #1e1e1e;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.experience-role h6 span {
+  color: #03a83b;
+  font-size: .92rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.experience-role ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.experience-role li {
+  margin-bottom: .55rem;
+  color: #4e4e4e;
+  line-height: 1.6;
+}
+
+.experience-role li:last-child {
+  margin-bottom: 0;
+}
+
+.socials .leetcode-icon {
+  width: 19px;
+  height: 19px;
+  vertical-align: -2px;
+}
+
+.socials .ico-circle:hover .leetcode-icon {
+  filter: brightness(0) invert(1);
 }
 
 /*======================================
@@ -857,6 +990,20 @@ a:hover {
 
 .card-blog .card-body {
   position: relative;
+}
+
+.card-blog .card-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  background: linear-gradient(135deg, #cde1f8 0%, #e8f4ea 100%);
+}
+
+.card-blog .card-img-placeholder .ion-ribbon-a {
+  font-size: 4rem;
+  color: #03d74a;
+  opacity: 0.85;
 }
 
 .card-blog .card-category-box {
@@ -1248,7 +1395,75 @@ footer .credits a {
 }
 
 @media (max-width: 768px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-group {
+    min-height: 0;
+  }
+
+  #about .box-shadow-full,
+  #experience .box-shadow-full {
+    padding: 2.25rem 1.35rem;
+  }
+
+  .experience-role {
+    padding-left: 1.35rem;
+  }
+
+  .experience-role h6 span {
+    display: block;
+    margin-top: .15rem;
+    white-space: normal;
+  }
+
   .back-to-top {
     bottom: 15px;
   }
+}
+
+.blog-mf .row {
+  align-items: stretch;
+}
+
+.blog-mf .col-md-4 {
+  display: flex;
+}
+
+.blog-mf .card-blog {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.card-blog .card-img,
+.card-blog .card-img-placeholder {
+  height: 220px;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.card-blog .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-blog .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+.card-blog .card-description {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.card-blog .card-footer {
+  min-height: 1.5rem;
 }
