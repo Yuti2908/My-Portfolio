@@ -107,7 +107,8 @@
       loop: true,
       smartBackspace: true,
       showCursor: true,
-      cursorChar: '|'
+      cursorChar: '|',
+      contentType: 'text'
     });
 	}
 
