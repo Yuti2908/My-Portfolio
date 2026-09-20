@@ -1522,3 +1522,13 @@ footer .credits a {
   .hobby-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
   .skill-cards .service-box { min-height:0; }
 }
+
+/* === Portfolio polish v2 === */
+.intro{height:78vh;min-height:560px}.intro .intro-title,.intro .intro-subtitle{max-width:1100px;margin-left:auto;margin-right:auto}
+.skill-cards{row-gap:22px}.skill-cards .service-box{min-height:235px;height:100%;margin-bottom:0;padding:1.65rem 1.15rem 1.4rem;border:1px solid #edf2ee;box-shadow:0 5px 18px rgba(0,0,0,.045)}
+.skill-cards .service-ico{margin-bottom:.7rem}.skill-cards .service-box .ico-circle{font-size:3.15rem}.skill-cards .service-box .s-title{font-size:1.18rem;padding:.25rem 0;margin-bottom:.25rem}
+.icon-skill-row{min-height:32px;margin:.7rem 0 .45rem;gap:.55rem .8rem}.icon-skill-row span{font-size:.78rem}.icon-skill-row i{width:20px;text-align:center;font-size:1rem}.skill-hover-list{font-size:.76rem;line-height:1.45}.skill-tile:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(0,0,0,.07)}
+.project-grid{gap:24px}.project-card .work-box,.secondary-project{border:1px solid #edf2ee;border-radius:14px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.045)}.project-card .work-img{height:220px}.project-card .work-content{padding:1.3rem 1.25rem 1.15rem}.project-card .w-title{min-height:2.7rem;font-size:1.12rem}.project-card .work-content p{min-height:64px;font-size:.9rem}.project-tags{gap:.32rem}.project-tags span{font-size:.68rem;padding:.22rem .48rem}
+.secondary-project .work-content{padding:1.2rem 1.2rem 1rem}.secondary-project .work-content p{font-size:.88rem;line-height:1.5;min-height:54px;margin-bottom:.65rem}.secondary-project .work-img{height:190px}.secondary-project .project-tags{min-height:54px;align-content:flex-start}.project-placeholder{height:100%;width:100%;display:flex;align-items:center;justify-content:center;background:#f7fbf8}
+.counter-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;align-items:start}.counter-grid>div{min-width:0}.counter-text{font-size:.72rem;line-height:1.25;display:block}.counter-num .counter{font-size:1.85rem}
+@media(max-width:991px){.counter-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}.intro{height:72vh}}@media(max-width:767px){.intro{height:68vh;min-height:500px}.intro .intro-title{font-size:2.5rem}.intro .intro-subtitle{font-size:1.35rem}.counter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
