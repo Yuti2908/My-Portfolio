@@ -1467,3 +1467,58 @@ footer .credits a {
 .card-blog .card-footer {
   min-height: 1.5rem;
 }
+
+
+/* === Portfolio refresh: project grid, skill hover details, hobbies === */
+.skill-cards .service-box { height: 100%; min-height: 285px; display:flex; flex-direction:column; justify-content:flex-start; }
+.skill-tile .service-content { position:relative; }
+.icon-skill-row { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:.7rem; margin:1rem 0 .6rem; }
+.icon-skill-row span { display:inline-flex; align-items:center; gap:.35rem; font-size:.82rem; color:#4e4e4e; white-space:nowrap; }
+.icon-skill-row img { width:20px; height:20px; object-fit:contain; }
+.icon-skill-row i { font-size:1.15rem; color:#1e1e1e; }
+.skill-hover-list { max-height:0; overflow:hidden; opacity:0; transform:translateY(6px); transition:max-height .35s ease, opacity .25s ease, transform .25s ease; color:#5a5a5a; font-size:.82rem; line-height:1.55; margin-top:.25rem; }
+.skill-tile:hover .skill-hover-list, .skill-tile:focus-within .skill-hover-list { max-height:90px; opacity:1; transform:translateY(0); }
+.skill-hover-list b { color:#1e1e1e; }
+
+.project-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; align-items:stretch; }
+.project-card { min-width:0; }
+.project-card .work-box { height:100%; display:flex; flex-direction:column; margin-bottom:0; }
+.project-card .work-img { height:245px; background:#f4f7f5; display:flex; align-items:center; justify-content:center; }
+.project-card .work-img img { width:100%; height:100%; object-fit:cover; }
+.project-card .work-content { flex:1; display:flex; flex-direction:column; padding:1.5rem 1.35rem 1.25rem; }
+.project-card .w-title { min-height:2.9rem; margin-bottom:.7rem; }
+.project-card .work-content p { min-height:72px; margin-bottom:.85rem; line-height:1.55; }
+.project-tags { display:flex; flex-wrap:wrap; gap:.38rem; margin-top:auto; }
+.project-tags span { background:#eef7f1; border:1px solid #dceee2; color:#19853d; border-radius:999px; padding:.25rem .55rem; font-size:.72rem; line-height:1.2; white-space:nowrap; }
+.project-footer { display:flex; align-items:center; justify-content:space-between; gap:.5rem; margin-top:1rem; font-size:.8rem; }
+.project-footer a { color:#03a83b; font-weight:600; }
+.project-extra { color:#999; font-size:.7rem; opacity:0; transition:opacity .2s ease; }
+.project-card:hover .project-extra { opacity:1; }
+.more-projects-title { margin:4rem 0 2rem; text-align:center; }
+.more-projects-title h4 { font-size:1.7rem; font-weight:600; }
+.secondary-project { height:100%; display:flex; flex-direction:column; }
+.secondary-project .work-img { height:205px; display:flex; align-items:center; justify-content:center; overflow:hidden; background:#f7fbf8; }
+.secondary-project .work-img img { width:100%; height:100%; object-fit:cover; }
+.secondary-project .work-content { flex:1; display:flex; flex-direction:column; }
+.secondary-project .w-title { min-height:2.7rem; }
+.secondary-project .project-footer { margin-top:auto; }
+.project-placeholder { color:#03a83b; font-size:4rem; }
+
+.beyond-code { padding-bottom:4rem; }
+.hobby-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px; max-width:1000px; margin:0 auto; }
+.hobby-grid > div { background:#fff; border-radius:1rem; padding:1.25rem .75rem; text-align:center; box-shadow:0 4px 18px rgba(0,0,0,.06); font-size:2rem; transition:transform .2s ease, box-shadow .2s ease; }
+.hobby-grid > div:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,.09); }
+.hobby-grid span { display:block; margin-top:.5rem; font-size:.82rem; color:#4e4e4e; font-weight:600; }
+
+@media (max-width: 991px) {
+  .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .hobby-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 767px) {
+  .project-grid { grid-template-columns:1fr; gap:24px; }
+  .project-card .work-img { height:220px; }
+  .secondary-project .work-img { height:210px; }
+  .project-card .work-content p { min-height:0; }
+  .hobby-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .skill-cards .service-box { min-height:0; }
+}
