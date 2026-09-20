@@ -1532,3 +1532,17 @@ footer .credits a {
 .secondary-project .work-content{padding:1.2rem 1.2rem 1rem}.secondary-project .work-content p{font-size:.88rem;line-height:1.5;min-height:54px;margin-bottom:.65rem}.secondary-project .work-img{height:190px}.secondary-project .project-tags{min-height:54px;align-content:flex-start}.project-placeholder{height:100%;width:100%;display:flex;align-items:center;justify-content:center;background:#f7fbf8}
 .counter-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;align-items:start}.counter-grid>div{min-width:0}.counter-text{font-size:.72rem;line-height:1.25;display:block}.counter-num .counter{font-size:1.85rem}
 @media(max-width:991px){.counter-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}.intro{height:72vh}}@media(max-width:767px){.intro{height:68vh;min-height:500px}.intro .intro-title{font-size:2.5rem}.intro .intro-subtitle{font-size:1.35rem}.counter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.counter-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;align-items:start}
+.counter-grid>div{min-width:0}
+.counter-box{min-width:0}
+.walkable-preview{position:relative;overflow:hidden;background:linear-gradient(145deg,#eef8f1,#dff1e6)!important}
+.walkable-art{position:relative;width:70%;height:100%;margin:auto;background:#f7faf8;transform:rotate(-5deg);box-shadow:0 10px 28px rgba(0,0,0,.08);border-radius:8px}
+.walkable-art:before,.walkable-art:after{content:"";position:absolute;background:#d7e9dd}
+.walkable-art:before{width:72%;height:12px;left:14%;top:30%;box-shadow:0 42px 0 #d7e9dd}
+.walkable-art:after{width:12px;height:72%;left:28%;top:14%;box-shadow:42px 0 0 #d7e9dd}
+.road-line{position:absolute;left:46%;top:8%;width:8%;height:84%;background:#9fd2ae;border-radius:99px}
+.map-pin{position:absolute;left:62%;top:24%;font-size:2.5rem;color:#03a83b}
+.damage-mark{position:absolute;left:28%;top:58%;font-size:2.2rem;color:#555;transform:rotate(18deg)}
+@media(max-width:991px){.counter-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}}
+@media(max-width:767px){.counter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
