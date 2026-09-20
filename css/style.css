@@ -1546,3 +1546,24 @@ footer .credits a {
 .damage-mark{position:absolute;left:28%;top:58%;font-size:2.2rem;color:#555;transform:rotate(18deg)}
 @media(max-width:991px){.counter-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}}
 @media(max-width:767px){.counter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* === Final layout fixes === */
+.section-counter .overlay-mf{z-index:0}
+.section-counter .container{position:relative;z-index:1}
+.counter-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:30px;align-items:start;width:100%}
+.counter-grid>div{min-width:0}
+.counter-grid .counter-box{color:#fff;opacity:1}
+.counter-grid .counter-num,.counter-grid .counter-text,.counter-grid .counter{opacity:1;color:#fff}
+.counter-grid .counter-text{font-size:.75rem;line-height:1.3}
+.counter-grid .counter-num .counter{font-size:2rem}
+.project-secondary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-left:0;margin-right:0}
+.project-secondary-grid>[class*="col-"]{padding-left:0;padding-right:0;width:auto;max-width:none;flex:none}
+.project-secondary-grid .secondary-project{margin-bottom:0}
+@media(max-width:991px){
+  .counter-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:30px}
+  .project-secondary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:767px){
+  .counter-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}
+  .project-secondary-grid{grid-template-columns:1fr;gap:24px}
+}
