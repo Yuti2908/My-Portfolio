@@ -1567,3 +1567,23 @@ footer .credits a {
   .counter-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}
   .project-secondary-grid{grid-template-columns:1fr;gap:24px}
 }
+
+/* Keep the hero title vertically stable while the subtitle types/deletes. */
+.intro .intro-subtitle {
+  height: 3.2rem;
+  min-height: 3.2rem;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro .intro-subtitle .text-slider {
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .intro .intro-subtitle {
+    height: 5.5rem;
+    min-height: 5.5rem;
+    line-height: 1.35;
+  }
+}
