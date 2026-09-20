@@ -91,9 +91,15 @@
 
 	/*--/ Star Typed /--*/
 	if ($('.text-slider').length == 1) {
-    var typed_strings = $('.text-slider-items').text();
+    var typed_strings = [
+      'I build backend systems, break things to see how they work.',
+      'I build with Java, Spring & Kafka.',
+      'I work on distributed systems, GenAI & developer tooling.',
+      'A Trans-Man who loves a good challenge.',
+      'Avid Reader and a Cat Lover.'
+    ];
     var typed = new Typed('.text-slider', {
-      strings: typed_strings.split('|'),
+      strings: typed_strings,
       typeSpeed: 48,
       backSpeed: 24,
       backDelay: 1500,
@@ -101,10 +107,7 @@
       loop: true,
       smartBackspace: true,
       showCursor: true,
-      cursorChar: '|',
-      onStringTyped: function(pos) {
-        $('.text-slider').attr('data-slide', pos + 1);
-      }
+      cursorChar: '|'
     });
 	}
 
