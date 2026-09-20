@@ -89,29 +89,62 @@
 		}
 	});
 
-	/*--/ Star Typed /--*/
+	/*--/ Hero text rotation /--*/
 	if ($('.text-slider').length == 1) {
-    var typed_strings = [
-      'I build backend systems, break things to see how they work.',
-      'I build with Java, Spring & Kafka.',
-      'I work on distributed systems, GenAI & developer tooling.',
-      'A Trans-Man who loves a good challenge.',
-      'Avid Reader and a Cat Lover.'
-    ];
-    var typed = new Typed('.text-slider', {
-      strings: typed_strings,
-      typeSpeed: 48,
-      backSpeed: 24,
-      backDelay: 1500,
-      startDelay: 300,
-      loop: true,
-      smartBackspace: true,
-      showCursor: true,
-      cursorChar: '|',
-      contentType: 'text'
-    });
-	}
+		var heroStrings = [
+			'I build backend systems, break things to see how they work.',
+			'I build with Java, Spring, and Kafka.',
+			'I work on distributed systems, GenAI, and developer tooling.',
+			'A Trans-Man who loves a good challenge.',
+			'Avid Reader and a Cat Lover.'
+		];
 
+		var heroEl = document.querySelector('.text-slider');
+		var heroIndex = 0;
+		var heroChar = 0;
+		var heroDeleting = false;
+		var heroPause = false;
+
+		function heroType() {
+			if (!heroEl) return;
+
+			var current = heroStrings[heroIndex];
+
+			if (heroPause) {
+				heroPause = false;
+				heroDeleting = true;
+				setTimeout(heroType, 650);
+				return;
+			}
+
+			if (!heroDeleting) {
+				heroChar++;
+				heroEl.textContent = current.substring(0, heroChar);
+
+				if (heroChar >= current.length) {
+					heroPause = true;
+					setTimeout(heroType, 1600);
+				} else {
+					setTimeout(heroType, 42);
+				}
+			} else {
+				heroChar--;
+				heroEl.textContent = current.substring(0, heroChar);
+
+				if (heroChar <= 0) {
+					heroDeleting = false;
+					heroIndex = (heroIndex + 1) % heroStrings.length;
+					heroChar = 0;
+					setTimeout(heroType, 350);
+				} else {
+					setTimeout(heroType, 22);
+				}
+			}
+		}
+
+		heroEl.textContent = '';
+		setTimeout(heroType, 300);
+	}
 	/*--/ Testimonials owl /--*/
 	$('#testimonial-mf').owlCarousel({
 		margin: 20,
